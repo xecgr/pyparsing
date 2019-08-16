@@ -356,10 +356,14 @@ class ParserTest(BooleanSearchParser):
             '31': 'help and hilp and not holp', 
             '32': 'help hilp not holp', 
             '33': 'help hilp and not holp',
-            '34': '*lp and halp'
+            '34': '*lp and halp',
+            '35': u"*신은 and 어떠세요",
         }
         
         texts_matcheswith = {
+            u"안녕하세요, 당신은 어떠세요?" : [
+                '10', '12', '25', '35'
+            ],
             "halp thinks he needs help": [
                 "25", "22", "20", "21", "11", "17", "16", "23", "34", "1", "0", "5", "7", "6", "9", "8"
             ], 
